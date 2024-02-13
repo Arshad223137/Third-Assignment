@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third Assignment</title>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/875c2435e1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- TailwindCSS and DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TailwindCSS Custom -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "#FF4240",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+      .manrope {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="manrope">
+    <header class="container mx-auto px-2">
+      <!-- navbar -->
+      <nav class="my-10">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[16px] font-normal"
+              >
+                <li><a class="hover:text-primary-color">Home</a></li>
+                <li><a class="hover:text-primary-color">About</a></li>
+                <li><a class="hover:text-primary-color">Pages</a></li>
+                <li><a class="hover:text-primary-color">Blog</a></li>
+                <li><a class="hover:text-primary-color">Contact</a></li>
+              </ul>
+            </div>
+            <a class="text-xl md:text-4xl font-extrabold"
+              >RoBi<span class="text-primary-color">'</span>S Game
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[16px] font-normal">
+              <li><a class="hover:text-primary-color">Home</a></li>
+              <li><a class="hover:text-primary-color">About</a></li>
+              <li><a class="hover:text-primary-color">Pages</a></li>
+              <li><a class="hover:text-primary-color">Blog</a></li>
+              <li><a class="hover:text-primary-color">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <i
+              class="text-xl mr-3 cursor-pointer hidden md:block fa-solid fa-magnifying-glass"
+            ></i>
+            <a
+              class="btn text-xs md:text-xl font-bold bg-primary-color text-white"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Hero part -->
+      <div class="relative">
+        <div class="carousel w-full h-[200px] md:h-[550px]">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img
+              src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+              class="w-full"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img
+              src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+              class="w-full"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img
+              src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+              class="w-full"
+            />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-black text-white p-5 rounded-2xl max-w-[500px] mx-auto md:absolute right-3 bottom-3"
+        >
+          <h3 class="text-2xl font-extrabold mb-2">
+            Meet all the heroes from the field
+          </h3>
+          <p class="text-[14px] font-medium">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto px-2">
+      <!-- Hockeys club section  -->
+      <section class="mt-32">
+        <div class="text-center">
+          <h1 class="text-4xl font-extrabold mb-6">
+            Professional Hockeys Club
+          </h1>
+          <p class="text-[16px] max-w-[600px] mx-auto font-medium">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+        <div class="flex mt-20 gap-7 flex-row flex-wrap">
+          <div class="text-center w-[250px] mx-auto space-y-4">
+            <div
+              class="radial-progress text-primary-color rotate-90 "
+              style="--value: 70"
+              role="progressbar"
+            >
+              <span class="text-xl font-extrabold text-black -rotate-90"> 70%</span>
+            </div>
+            <h3 class="text-xl font-semibold">Prayer Facility</h3>
+            <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+          </div>
+          <div class="text-center w-[250px] mx-auto space-y-4">
+            <div
+              class="radial-progress text-[#49D293] rotate-90"
+              style="--value: 95"
+              role="progressbar"
+            >
+              <span class="text-xl font-extrabold text-black -rotate-90"> 95%</span>
+            </div>
+            <h3 class="text-xl font-semibold">Experienced Coach</h3>
+            <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+          </div>
+          <div class="text-center w-[250px] mx-auto space-y-4">
+            <div
+              class="radial-progress text-[#FFB546] rotate-90 "
+              style="--value: 90"
+              role="progressbar"
+            >
+              <span class="text-xl font-extrabold text-black -rotate-90"> 90%</span>
+            </div>
+            <h3 class="text-xl font-semibold">Senior Player</h3>
+            <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+          </div>
+          <div class="text-center w-[250px] mx-auto space-y-4">
+            <div
+              class="radial-progress text-[#4C8DF1] rotate-90 "
+              style="--value: 80"
+              role="progressbar"
+            >
+              <span class="text-xl font-extrabold text-black -rotate-90"> 80%</span>
+            </div>
+            <h3 class="text-xl font-semibold">Training Ground</h3>
+            <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+          </div>
+        </div>
+      </section>
+
+    
+    </main>
+    <footer></footer>
+  </body>
+</html>
